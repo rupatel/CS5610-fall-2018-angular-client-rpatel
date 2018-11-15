@@ -13,6 +13,9 @@ import {LessonServiceClient} from './services/LessonServiceClient';
 import {ModuleServiceClient} from './services/ModuleServiceClient';
 import {TopicServiceClient} from './services/TopicServiceClient';
 import {WidgetServiceClient} from './services/WidgetServiceClient';
+import { CourseCardComponent } from './course-card/course-card.component';
+import { CourseTableNavBarComponent } from './course-table-nav-bar/course-table-nav-bar.component';
+import { CourseGridHeaderComponent } from './course-grid-header/course-grid-header.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import {WidgetServiceClient} from './services/WidgetServiceClient';
     WidgetListComponentComponent,
     CourseGridComponentComponent,
     ModuleListComponentComponent,
-    LessonTabsComponentComponent
+    LessonTabsComponentComponent,
+    CourseCardComponent,
+    CourseTableNavBarComponent,
+    CourseGridHeaderComponent
   ],
   imports: [
     BrowserModule,
