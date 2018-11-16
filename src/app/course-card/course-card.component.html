@@ -5,10 +5,10 @@
     </div>
     <div class="h-25 p-2">
       <a routerLink = '/course/{{course.id}}/edit' class='no-decorate'>
-        <h5 class="card-title font-weight-bold text-truncate">{{course.title}}</h5>
+        <h5 class="card-title font-weight-bold text-truncate">{{course ? course.title : "DUMMY"}}</h5>
       </a>
       <div class="d-block">
-        <a class="mr-2 no-decorate d-inline" routerLink='/course/{{course.id}}}/view'>
+        <a class="mr-2 no-decorate d-inline" routerLink='/course/{{course ? course.id : "DUMMY"}}/view'>
         <i class="fas fa-file-alt"></i> </a>
         <p class="mr-2 text-truncate d-inline">Modified 8.09 am</p>
       </div>
