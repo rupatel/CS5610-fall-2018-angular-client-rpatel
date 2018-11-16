@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topic-pills-component.component.css']
 })
 export class TopicPillsComponentComponent implements OnInit {
-
+  topic;
   constructor() { }
 
   ngOnInit() {

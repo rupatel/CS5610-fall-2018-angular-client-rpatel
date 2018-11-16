@@ -16,6 +16,16 @@ import {WidgetServiceClient} from './services/WidgetServiceClient';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { CourseTableNavBarComponent } from './course-table-nav-bar/course-table-nav-bar.component';
 import { CourseGridHeaderComponent } from './course-grid-header/course-grid-header.component';
+import { CourseViewerComponent } from './course-viewer/course-viewer.component';
+import { ModuleTabContentComponent } from './module-tab-content/module-tab-content.component';
+import { ModuleComponent } from './module/module.component';
+import { WidgetComponent } from './widget/widget.component';
+import { HeaderWidgetPreviewComponent } from './header-widget-preview/header-widget-preview.component';
+import { ParagraphWidgetPreviewComponent } from './paragraph-widget-preview/paragraph-widget-preview.component';
+import { ListWidgetPreviewComponent } from './list-widget-preview/list-widget-preview.component';
+import { ImageWidgetPreviewComponent } from './image-widget-preview/image-widget-preview.component';
+import { LinkWidgetPreviewComponent } from './link-widget-preview/link-widget-preview.component';
+import { TopicComponent } from './topic/topic.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +37,17 @@ import { CourseGridHeaderComponent } from './course-grid-header/course-grid-head
     LessonTabsComponentComponent,
     CourseCardComponent,
     CourseTableNavBarComponent,
-    CourseGridHeaderComponent
+    CourseGridHeaderComponent,
+    CourseViewerComponent,
+    ModuleTabContentComponent,
+    ModuleComponent,
+    WidgetComponent,
+    HeaderWidgetPreviewComponent,
+    ParagraphWidgetPreviewComponent,
+    ListWidgetPreviewComponent,
+    ImageWidgetPreviewComponent,
+    LinkWidgetPreviewComponent,
+    TopicComponent
   ],
   imports: [
     BrowserModule,

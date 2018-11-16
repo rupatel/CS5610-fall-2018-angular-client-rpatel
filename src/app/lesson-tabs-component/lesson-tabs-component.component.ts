@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lesson-tabs-component.component.css']
 })
 export class LessonTabsComponentComponent implements OnInit {
-
+  lesson = {title : 'JS'};
+  courseTitle = 'CS5800';
   constructor() { }
 
   ngOnInit() {

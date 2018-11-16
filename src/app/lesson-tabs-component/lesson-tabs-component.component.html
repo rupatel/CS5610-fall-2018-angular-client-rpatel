@@ -1,3 +1,22 @@
-<p>
-  lesson-tabs-component works!
-</p>
+<nav class="navbar navbar-expand navbar-dark bg-dark fixed-top" style="background:#4e4747;
+        height: 10vh">
+  <div class="container-fluid">
+    <div class="row w-100">
+      <div class="col-3">
+        <span class="p-0 m-0 navbar-brand text-white text-bold">
+            {{courseTitle}}
+        </span>
+      </div>
+      <div class="col-6">
+        <nav class="navLessons">
+          <div class="nav nav-tabs border-bottom-0 hover-black" id="nav-module1-lesson1-tab"
+               role="tablist">
+            <span>
+            {{lesson.title}}
+            </span>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</nav>
