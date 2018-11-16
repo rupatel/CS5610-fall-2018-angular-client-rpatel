@@ -1,18 +1,16 @@
-<div className="p-0 col-sm-12 col-md-4 col-lg-2 h-100">
-  <div className="col-12 pl-3 pt-3 pb-0 pr-0 h-100">
-    <div className="h-100" style="background:#FFFFFF">
-      <div className="card-body">
-        <p className="card-text" style="maxHeight:20rem">{{course.courseDescription}}</p>
-      </div>
-      <div className="h-25 p-2">
-        <a routerLink = '/course/{{course.id}}/edit' className='no-decorate'>
-          <h5 className="card-title font-weight-bold text-truncate">{{course.title}}</h5>
-        </a>
-        <div className="d-block">
-          <a className="mr-2 no-decorate d-inline" routerLink='/course/{{course.id}}}/view'>
-          <i className="fas fa-file-alt"></i> </a>
-          <p className="mr-2 text-truncate d-inline">Modified 8.09 am</p>
-        </div>
+<div class="col-12 pl-3 pt-3 pb-0 pr-0 h-100">
+  <div class="h-100" style="background:#FFFFFF">
+    <div class="card-body">
+      <p class="card-text" style="max-height:20rem">{{course.courseDescription}}</p>
+    </div>
+    <div class="h-25 p-2">
+      <a routerLink = '/course/{{course.id}}/edit' class='no-decorate'>
+        <h5 class="card-title font-weight-bold text-truncate">{{course.title}}</h5>
+      </a>
+      <div class="d-block">
+        <a class="mr-2 no-decorate d-inline" routerLink='/course/{{course.id}}}/view'>
+        <i class="fas fa-file-alt"></i> </a>
+        <p class="mr-2 text-truncate d-inline">Modified 8.09 am</p>
       </div>
     </div>
   </div>
