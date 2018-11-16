@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 export class  WidgetServiceClient {
   URL = 'http://localhost:8080';
   findAllWidgets() {
-    return fetch(URL + '/api/widget',
+    return fetch(this.URL + '/api/widget',
       {
         credentials: 'include',
         method: 'GET',
@@ -13,7 +13,7 @@ export class  WidgetServiceClient {
       });
   }
   findWidgetsForTopic(topicId) {
-    return fetch(URL + '/api/topic/' + topicId + '/widget',
+    return fetch(this.URL + '/api/topic/' + topicId + '/widget',
       {
         credentials: 'include',
         method: 'GET',
@@ -23,7 +23,7 @@ export class  WidgetServiceClient {
       });
   }
   findWidgetById(widgetId) {
-    return fetch(URL + '/api/widget/' + widgetId,
+    return fetch(this.URL + '/api/widget/' + widgetId,
       {
         credentials: 'include',
         method: 'GET',

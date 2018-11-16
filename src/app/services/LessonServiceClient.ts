@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 export class  LessonServiceClient {
   URL = 'http://localhost:8080';
   findAllLessons() {
-    return fetch(URL + '/api/lesson',
+    return fetch(this.URL + '/api/lesson',
       {
         credentials: 'include',
         method: 'GET',
@@ -13,7 +13,7 @@ export class  LessonServiceClient {
       }).then(response => response.json());
   }
   findLessonsForModule(moduleId) {
-    return fetch(URL + '/api/module/' + moduleId + '/lesson',
+    return fetch(this.URL + '/api/module/' + moduleId + '/lesson',
       {
         credentials: 'include',
         method: 'GET',
@@ -23,7 +23,7 @@ export class  LessonServiceClient {
       }).then(response => response.json());
   }
   findLessonById(lessonId) {
-    return fetch(URL + '/api/lesson/' + lessonId,
+    return fetch(this.URL + '/api/lesson/' + lessonId,
       {
         credentials: 'include',
         method: 'GET',

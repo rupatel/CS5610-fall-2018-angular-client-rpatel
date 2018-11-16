@@ -2,19 +2,19 @@ import {Injectable} from '@angular/core';
 @Injectable()
 export class  CourseServiceClient {
   URL = 'http://localhost:8080';
-  static findAllCourses() {
-    return fetch(URL + '/api/profile',
+  findAllCourses() {
+    return fetch(this.URL + '/api/course',
       {
         credentials: 'include',
         method: 'GET',
         headers: {
           'Content-Typ': 'application/json'
         }
-      }).then(response => response.json());
+      }).then(response =>  response.json());
   }
 
-  static findCourseById(id) {
-    return fetch(URL + '/api/course/' + id,
+  findCourseById(id) {
+    return fetch(this.URL + '/api/course/' + id,
       {
         credentials: 'include',
         method: 'GET',

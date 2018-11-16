@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 export class  TopicServiceClient {
   URL = 'http://localhost:8080';
   findAllTopics() {
-    return fetch(URL + '/api/topic',
+    return fetch(this.URL + '/api/topic',
       {
         credentials: 'include',
         method: 'GET',
@@ -13,7 +13,7 @@ export class  TopicServiceClient {
       }).then(response => response.json());
   }
   findTopicsForLesson(lessonId) {
-    return fetch(URL + '/api/lesson/' + lessonId + '/topic',
+    return fetch(this.URL + '/api/lesson/' + lessonId + '/topic',
       {
         credentials: 'include',
         method: 'GET',
@@ -23,7 +23,7 @@ export class  TopicServiceClient {
       }).then(response => response.json());
   }
   findTopicById(topicId) {
-    return fetch(URL + '/api/topic/' + topicId,
+    return fetch(this.URL + '/api/topic/' + topicId,
       {
         credentials: 'include',
         method: 'GET',

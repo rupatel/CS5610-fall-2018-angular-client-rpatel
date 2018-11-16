@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CourseServiceClient} from '../services/CourseServiceClient';
 
 @Component({
   selector: 'app-course-grid-component',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./course-grid-component.component.css']
 })
 export class CourseGridComponentComponent implements OnInit {
+  courses = [];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private service: CourseServiceClient) {
   }
 
+  ngOnInit() {
+    this.service.findAllCourses()
+      .then(courses => {
+        this.courses = courses;
+      });
+  }
 }
