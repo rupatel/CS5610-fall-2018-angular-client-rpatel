@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-lesson-tabs-component',
@@ -15,7 +15,8 @@ export class LessonTabsComponentComponent implements OnInit {
     {id : 6, title : 'Lesson6'},
     {id : 7, title : 'Lesson7'},
     {id : 8, title : 'Lesson8'}];
-  courseTitle = 'CS5800';
+  @Input()
+  courseTitle;
   constructor() { }
 
   ngOnInit() {
