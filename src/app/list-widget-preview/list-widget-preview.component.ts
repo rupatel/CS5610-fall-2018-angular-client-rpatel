@@ -9,7 +9,6 @@ export class ListWidgetPreviewComponent implements OnInit {
   @Input() widget;
   constructor() { }
   get list() {
-    console.log('>>>>>>>>>>>>>' + this.widget.items);
     return this.widget.items ? this.widget.items.split(',') : [];
   }
   ngOnInit() {

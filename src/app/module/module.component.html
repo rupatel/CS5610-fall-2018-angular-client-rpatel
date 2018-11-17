@@ -1,10 +1,17 @@
 <div class="container-fluid modules">
   <div class="row">
     <div class="col-3 modulesTab">
-      <app-module-list-component [modules] = "modules"></app-module-list-component>
+      <app-module-list-component
+        [(selectedLessonId)] = "selectedLessonId"
+        [(selectedTopicId)] = "selectedTopicId"
+        [(selectedModuleId)] = "selectedModuleId"
+        [modules] = "modules"></app-module-list-component>
     </div>
     <div class="col-9 offset-3">
-      <app-module-tab-content></app-module-tab-content>
+      <app-module-tab-content
+        [(selectedLessonId)] = "selectedLessonId"
+        [(selectedTopicId)] = "selectedTopicId"
+      ></app-module-tab-content>
     </div>
   </div>
 </div>

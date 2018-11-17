@@ -1,11 +1,13 @@
 <div class="container">
   <div class="row nav flex-column nav-pills" id="v-pills-module-tab" role="tablist"
        aria-orientation="vertical">
-    <a href="#" class = "no-decorate nav-link m-2 pt-0 pb-0" style = "height: calc(2.25rem + 2px)"
+    <a href="#" [ngClass]="{'active': module.id == selectedModuleId}"
+       class = "no-decorate nav-link m-2 pt-0 pb-0" style = "height: calc(2.25rem + 2px)"
           *ngFor="let module of modules">
       <span aria-selected="true"
             class="align-middle"
-            style = "backgroundColor:transparent;border:0;color:white">
+            style = "background-color:transparent;border:0;color:white"
+      >
         {{module.title}}
       </span>
     </a>

@@ -1,4 +1,12 @@
 <div className="container-fluid m-0 p-0">
-  <app-lesson-tabs-component [courseTitle] = "course ? course.title : ''"></app-lesson-tabs-component>
-  <app-module [modules] = "course ? course.modules ? course.modules : [] : []"></app-module>
+  <app-lesson-tabs-component
+    [(selectedLessonId)] = "selectedLessonId"
+    [(selectedTopicId)] = "selectedTopicId"
+    [(selectedModuleId)] = "selectedModuleId"
+    [courseTitle] = "course ? course.title : ''"></app-lesson-tabs-component>
+  <app-module
+    [(selectedLessonId)] = "selectedLessonId"
+    [(selectedTopicId)] = "selectedTopicId"
+    [(selectedModuleId)] = "selectedModuleId"
+    [modules] = "course ? course.modules ? course.modules : [] : []"></app-module>
 </div>

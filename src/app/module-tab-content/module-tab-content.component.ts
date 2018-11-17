@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-module-tab-content',
@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./module-tab-content.component.css']
 })
 export class ModuleTabContentComponent implements OnInit {
-
+  @Input()
+  selectedLessonId;
+  @Input()
+  selectedTopicId;
+  @Input()
+  selectedModuleId;
   constructor() { }
 
   ngOnInit() {

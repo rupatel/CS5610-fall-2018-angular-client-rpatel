@@ -8,6 +8,12 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ModuleComponent implements OnInit {
   @Input()
   modules;
+  @Input()
+  selectedLessonId;
+  @Input()
+  selectedTopicId;
+  @Input()
+  selectedModuleId;
   constructor() { }
 
   ngOnInit() {
