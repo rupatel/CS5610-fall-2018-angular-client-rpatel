@@ -1,0 +1,9 @@
+.nav-link {
+  background: #655858;
+  color: white;
+}
+
+.nav-pills .nav-link.active {
+  background: #4a4d50;
+  color: white;
+}

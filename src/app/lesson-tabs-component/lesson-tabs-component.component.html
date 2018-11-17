@@ -7,12 +7,18 @@
             {{courseTitle}}
         </span>
       </div>
-      <div class="col-6">
+      <div class="col-9">
         <nav class="navLessons">
           <div class="nav nav-tabs border-bottom-0 hover-black" id="nav-module1-lesson1-tab"
-               role="tablist">
-            <span>
-            {{lesson.title}}
+               role="tablist"
+               >
+            <span class = "nav-item nav-link text-black" *ngFor="let lesson of lessons">
+              <span
+                class="p-0 d-inline text-truncate"
+                style="backgroundColor:transparent;border: 0;
+                 color: white;width: 50px;height: 3vh">
+              {{lesson.title}}
+              </span>
             </span>
           </div>
         </nav>
