@@ -17,11 +17,8 @@ export class LessonTabsComponentComponent implements OnInit {
     {id : 8, title : 'Lesson8'}];
   @Input()
   courseTitle;
-
   @Input()
-  selectedLessonId;
-  @Input()
-  selectedTopicId;
+  selectedCourseId;
   @Input()
   selectedModuleId;
 

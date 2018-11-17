@@ -7,13 +7,14 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ModuleListComponentComponent implements OnInit {
   @Input()
-  modules;
-  @Input()
-  selectedLessonId;
-  @Input()
-  selectedTopicId;
+  selectedCourseId;
   @Input()
   selectedModuleId;
+  @Input()
+  modules;
+  selectModule(moduleId) {
+    this.selectedModuleId = moduleId;
+  }
   constructor() {
   }
   ngOnInit() {

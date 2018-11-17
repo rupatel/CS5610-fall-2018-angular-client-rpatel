@@ -7,11 +7,9 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ModuleTabContentComponent implements OnInit {
   @Input()
-  selectedLessonId;
-  @Input()
-  selectedTopicId;
-  @Input()
   selectedModuleId;
+  @Input()
+  selectedCourseId;
   constructor() { }
 
   ngOnInit() {

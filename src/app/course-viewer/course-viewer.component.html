@@ -1,12 +1,9 @@
 <div className="container-fluid m-0 p-0">
   <app-lesson-tabs-component
-    [(selectedLessonId)] = "selectedLessonId"
-    [(selectedTopicId)] = "selectedTopicId"
-    [(selectedModuleId)] = "selectedModuleId"
+    [selectedCourseId] = "selectedCourseId"
+    [selectedModuleId] = "selectedModuleId"
     [courseTitle] = "course ? course.title : ''"></app-lesson-tabs-component>
   <app-module
-    [(selectedLessonId)] = "selectedLessonId"
-    [(selectedTopicId)] = "selectedTopicId"
-    [(selectedModuleId)] = "selectedModuleId"
-    [modules] = "course ? course.modules ? course.modules : [] : []"></app-module>
+    [selectedCourseId] = "selectedCourseId">
+  </app-module>
 </div>

@@ -10,9 +10,7 @@ import {map} from 'rxjs/operators';
 })
 export class CourseViewerComponent implements OnInit {
   course;
-  selectedModuleId;
-  selectedLessonId;
-  selectedTopicId;
+  selectedCourseId;
   constructor(private route: ActivatedRoute, private service: CourseServiceClient) {
     const courseIdObs = this.route
       .paramMap
@@ -22,6 +20,7 @@ export class CourseViewerComponent implements OnInit {
       this.service.findCourseById(courseId)
         .then(course => {
           this.course = course;
+          this.selectedCourseId = courseId;
         }));
   }
 
