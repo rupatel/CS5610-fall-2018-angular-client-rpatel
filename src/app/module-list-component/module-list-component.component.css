@@ -7,3 +7,7 @@
   background: #4a4d50;
   color: white;
 }
+a.no-decorate{
+  text-decoration:none;
+  color: black;
+}

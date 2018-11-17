@@ -3,3 +3,7 @@
   background-color: #524949;
   border-color: transparent;
 }
+a.no-decorate{
+  text-decoration:none;
+  color: black;
+}
