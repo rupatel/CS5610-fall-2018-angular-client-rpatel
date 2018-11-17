@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-paragraph-widget-preview',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paragraph-widget-preview.component.css']
 })
 export class ParagraphWidgetPreviewComponent implements OnInit {
-  widget;
+  @Input() widget;
   constructor() { }
 
   ngOnInit() {

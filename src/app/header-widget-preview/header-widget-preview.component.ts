@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header-widget-preview',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-widget-preview.component.css']
 })
 export class HeaderWidgetPreviewComponent implements OnInit {
-  widget;
+  @Input() widget;
   constructor() { }
 
   ngOnInit() {

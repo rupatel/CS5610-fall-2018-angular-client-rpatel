@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-link-widget-preview',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./link-widget-preview.component.css']
 })
 export class LinkWidgetPreviewComponent implements OnInit {
-  widget;
+  @Input() widget;
   constructor() { }
 
   ngOnInit() {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-image-widget-preview',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./image-widget-preview.component.css']
 })
 export class ImageWidgetPreviewComponent implements OnInit {
-  widget;
+  @Input() widget;
   constructor() { }
 
   ngOnInit() {

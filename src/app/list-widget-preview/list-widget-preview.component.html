@@ -1,3 +1,8 @@
 <div class="container">
-  <li>item</li>
+  <div *ngIf="!widget.isOrdered;else ordered">
+    <ul><li  *ngFor="let item of list">{{item}}</li></ul>
+  </div>
+  <ng-template #ordered>
+    <ol> <li  *ngFor="let item of list">{{item}}</li> </ol>
+  </ng-template>
 </div>

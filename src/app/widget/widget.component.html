@@ -1,11 +1,21 @@
 <div class="container">
   <div class="container">
     <div class="row mb-3">
-      <app-header-widget-preview></app-header-widget-preview>
-      <app-paragraph-widget-preview></app-paragraph-widget-preview>
-      <app-list-widget-preview></app-list-widget-preview>
-      <app-image-widget-preview></app-image-widget-preview>
-      <app-link-widget-preview></app-link-widget-preview>
+      <app-header-widget-preview
+        *ngIf="'HEADING' == widget.type"
+        [widget] = "widget"></app-header-widget-preview>
+      <app-paragraph-widget-preview
+        *ngIf="'PARAGRAPH' == widget.type"
+        [widget] = "widget"></app-paragraph-widget-preview>
+      <app-list-widget-preview
+        *ngIf="'LIST' == widget.type"
+        [widget] = "widget"></app-list-widget-preview>
+      <app-image-widget-preview
+        *ngIf="'IMAGE' == widget.type"
+        [widget] = "widget"></app-image-widget-preview>
+      <app-link-widget-preview
+        *ngIf="'LINK' == widget.type"
+        [widget] = "widget"></app-link-widget-preview>
     </div>
   </div>
 </div>
