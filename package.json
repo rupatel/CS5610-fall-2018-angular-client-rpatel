@@ -2,7 +2,7 @@
   "name": "cs5610-angular-client",
   "version": "0.0.0",
   "scripts": {
-    "postinstall": "ng build --aot -prod",
+    "postinstall": "ng build --aot --prod",
     "start": "node server.js"
   },
   "private": true,
