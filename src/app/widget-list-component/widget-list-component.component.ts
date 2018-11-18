@@ -20,6 +20,11 @@ export class WidgetListComponentComponent implements OnInit, OnChanges {
         this.widgetService.findWidgetsForTopic(changedProp.currentValue)
           .then(widgets => {
             this.widgets = widgets;
+            this.widgets.sort((w1, w2) => {
+              const idx1 = w1.index ? w1.index : -1;
+              const idx2 = w2.index ? w2.index : -1;
+              return (idx1 < idx2) ? -1 : (idx1 > idx2) ? 1 : 0;
+            });
           });
       }
     }

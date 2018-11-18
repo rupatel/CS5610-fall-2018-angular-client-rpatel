@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-link-widget-preview',
@@ -7,9 +8,15 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class LinkWidgetPreviewComponent implements OnInit {
   @Input() widget;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  redirect(link) {
+    if (!link) {
+      return;
+    }
+    window.open(link);
+  }
 }
