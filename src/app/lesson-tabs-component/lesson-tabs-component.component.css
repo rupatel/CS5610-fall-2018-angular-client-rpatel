@@ -7,3 +7,6 @@ a.no-decorate{
   text-decoration:none;
   color: black;
 }
+a:hover {
+  cursor:pointer;
+}

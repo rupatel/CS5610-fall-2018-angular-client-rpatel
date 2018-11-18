@@ -11,6 +11,9 @@ import {map} from 'rxjs/operators';
 export class CourseViewerComponent implements OnInit {
   course;
   selectedCourseId;
+  selectedModuleId;
+  selectedLessonId;
+  selectedTopicId;
   constructor(private route: ActivatedRoute, private service: CourseServiceClient) {
     const courseIdObs = this.route
       .paramMap
@@ -23,7 +26,15 @@ export class CourseViewerComponent implements OnInit {
           this.selectedCourseId = courseId;
         }));
   }
-
+  selectModule(moduleId) {
+    this.selectedModuleId = moduleId;
+  }
+  selectLesson(lessonId) {
+    this.selectedLessonId = lessonId;
+  }
+  selectTopic(topicId) {
+    this.selectedTopicId = topicId;
+  }
   ngOnInit() {
   }
 }

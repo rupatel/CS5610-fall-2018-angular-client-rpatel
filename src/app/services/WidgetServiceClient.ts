@@ -10,7 +10,7 @@ export class  WidgetServiceClient {
         headers: {
           'Content-Type': 'application/json'
         }
-      });
+      }).then(response => response.json());
   }
   findWidgetsForTopic(topicId) {
     return fetch(this.URL + '/api/topic/' + topicId + '/widget',
@@ -20,7 +20,7 @@ export class  WidgetServiceClient {
         headers: {
           'Content-Type': 'application/json'
         }
-      });
+      }).then(response => response.json());
   }
   findWidgetById(widgetId) {
     return fetch(this.URL + '/api/widget/' + widgetId,
@@ -30,6 +30,6 @@ export class  WidgetServiceClient {
         headers: {
           'Content-Type': 'application/json'
         }
-      });
+      }).then(response => response.json());
   }
 }

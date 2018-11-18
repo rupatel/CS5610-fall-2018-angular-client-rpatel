@@ -1,30 +1,45 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange} from '@angular/core';
+import {LessonServiceClient} from '../services/LessonServiceClient';
+
 
 @Component({
   selector: 'app-lesson-tabs-component',
   templateUrl: './lesson-tabs-component.component.html',
   styleUrls: ['./lesson-tabs-component.component.css']
 })
-export class LessonTabsComponentComponent implements OnInit {
-  lessons = [
-    {id : 1, title : 'Lesson1'},
-    {id : 2, title : 'Lesson2'},
-    {id : 3, title : 'Lesson3'},
-    {id : 4, title : 'Lesson4'},
-    {id : 5, title : 'Lesson5'},
-    {id : 6, title : 'Lesson6'},
-    {id : 7, title : 'Lesson7'},
-    {id : 8, title : 'Lesson8'}];
+export class LessonTabsComponentComponent implements OnInit, OnChanges {
+  lessons = [];
   @Input()
   courseTitle;
   @Input()
-  selectedCourseId;
-  @Input()
   selectedModuleId;
-
-  constructor() { }
+  @Input()
+  selectedLessonId;
+  @Output()
+  selectedLessonIdChange = new EventEmitter<Number>();
+  ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
+    for (const propName in changes) {
+      if (propName === 'selectedModuleId') {
+        const changedProp = changes[propName];
+        if (!changedProp.currentValue) {
+          return;
+        }
+        this.lessonService.findLessonsForModule(changedProp.currentValue)
+          .then(lessons => {
+            this.lessons = lessons;
+            if (this.lessons.length > 0) {
+              this.selectLesson(lessons[0].id);
+            }
+          });
+      }
+    }
+  }
+  selectLesson(lessonId) {
+    this.selectedLessonId = lessonId;
+    this.selectedLessonIdChange.emit(lessonId);
+  }
+  constructor(private lessonService: LessonServiceClient) { }
 
   ngOnInit() {
   }
-
 }

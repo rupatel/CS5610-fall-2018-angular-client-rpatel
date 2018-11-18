@@ -2,15 +2,14 @@
   <div class="row">
     <div class="col-3 modulesTab">
       <app-module-list-component
-        [selectedCourseId] = "selectedCourseId"
-        [(selectedModuleId)] = "selectedModuleId"
+        [selectedModuleId] = "selectedModuleId" (selectedModuleIdChange) = "selectModule($event)"
         [modules] = "modules">
       </app-module-list-component>
     </div>
     <div class="col-9 offset-3">
       <app-module-tab-content
-        [selectedModuleId] = "selectedModuleId"
-        [selectedCourseId] = "selectedCourseId">
+        [selectedLessonId] = "selectedLessonId"
+        [selectedTopicId] = "selectedTopicId" (selectedTopicIdChange) = "selectTopic($event)">
       ></app-module-tab-content>
     </div>
   </div>

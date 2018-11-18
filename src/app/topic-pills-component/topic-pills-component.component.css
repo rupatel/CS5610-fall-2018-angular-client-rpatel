@@ -11,3 +11,7 @@
 a.no-decorate{
   text-decoration:none;
 }
+
+a:hover {
+  cursor:pointer;
+}

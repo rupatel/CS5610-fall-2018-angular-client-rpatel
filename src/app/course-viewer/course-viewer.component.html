@@ -1,9 +1,15 @@
 <div className="container-fluid m-0 p-0">
+  <span style="color:black">{{selectedModuleId}}:::::{{selectedLessonId}}:::::{{selectedTopicId}}
+    ....................</span>
   <app-lesson-tabs-component
-    [selectedCourseId] = "selectedCourseId"
     [selectedModuleId] = "selectedModuleId"
-    [courseTitle] = "course ? course.title : ''"></app-lesson-tabs-component>
+    (selectedLessonId) = "selectedLessonId" (selectedLessonIdChange) = "selectLesson($event)"
+    [courseTitle] = "course ? course.title : ''">
+  </app-lesson-tabs-component>
   <app-module
-    [selectedCourseId] = "selectedCourseId">
+    [selectedLessonId]="selectedLessonId"
+    [selectedTopicId] = "selectedTopicId" (selectedTopicIdChange) = "selectTopic($event)"
+    [selectedCourseId] = "selectedCourseId"
+    [selectedModuleId] = "selectedModuleId" (selectedModuleIdChange) = "selectModule($event)">
   </app-module>
 </div>

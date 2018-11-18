@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-module-list-component',
@@ -7,15 +7,17 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ModuleListComponentComponent implements OnInit {
   @Input()
-  selectedCourseId;
-  @Input()
   selectedModuleId;
+  @Output()
+  selectedModuleIdChange = new EventEmitter<number>();
+
   @Input()
   modules;
+  constructor() {
+  }
   selectModule(moduleId) {
     this.selectedModuleId = moduleId;
-  }
-  constructor() {
+    this.selectedModuleIdChange.emit(moduleId);
   }
   ngOnInit() {
   }

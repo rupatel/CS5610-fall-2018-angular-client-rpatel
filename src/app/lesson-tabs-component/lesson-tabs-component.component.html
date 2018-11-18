@@ -12,7 +12,9 @@
           <div class="nav nav-tabs border-bottom-0 hover-black" id="nav-module1-lesson1-tab"
                role="tablist"
                >
-            <a routerLink="#" class = "no-decorate nav-item nav-link text-black" *ngFor="let lesson of lessons">
+            <a [ngClass]="{'active': lesson.id == selectedLessonId}" class = "no-decorate nav-item nav-link text-black"
+               *ngFor="let lesson of lessons"
+               (click) ="selectLesson(lesson.id)">
               <span
                 class="p-0 d-inline text-truncate"
                 style="backgroundColor:transparent;border: 0;

@@ -1,4 +1,10 @@
 <div>
-  <app-topic-pills-component></app-topic-pills-component>
-  <app-widget-list-component></app-widget-list-component>
+  <app-topic-pills-component
+  [selectedTopicId] = "selectedTopicId" (selectedTopicIdChange)="selectTopic($event)"
+  [topics] = "topics">
+  </app-topic-pills-component>
+
+  <app-widget-list-component
+  [selectedTopicId] = "selectedTopicId"
+  ></app-widget-list-component>
 </div>
