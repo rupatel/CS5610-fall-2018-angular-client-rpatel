@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 
 @Component({
@@ -7,19 +7,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./topic.component.css']
 })
 export class TopicComponent implements OnInit {
-
-  @Input()
-  selectedTopicId;
-  @Output()
-  selectedTopicIdChange = new EventEmitter<Number>();
-  @Input()
-  topics;
   constructor() { }
-
   ngOnInit() {
-  }
-  selectTopic(topicId) {
-    this.selectedTopicId = topicId;
-    this.selectedTopicIdChange.emit(topicId);
   }
 }

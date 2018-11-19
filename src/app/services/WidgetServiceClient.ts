@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 @Injectable()
 export class  WidgetServiceClient {
-  URL = 'https://a7submissionjava.herokuapp.com';
+  URL = 'https://a7submissionjavav2.herokuapp.com';
   findAllWidgets() {
     return fetch(this.URL + '/api/widget',
       {

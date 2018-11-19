@@ -1,13 +1,6 @@
 <div className="container-fluid m-0 p-0">
-  <app-lesson-tabs-component
-    [selectedModuleId] = "selectedModuleId"
-    (selectedLessonId) = "selectedLessonId" (selectedLessonIdChange) = "selectLesson($event)"
-    [courseTitle] = "course ? course.title : ''">
+  <app-lesson-tabs-component>
   </app-lesson-tabs-component>
-  <app-module
-    [selectedLessonId]="selectedLessonId"
-    [selectedTopicId] = "selectedTopicId" (selectedTopicIdChange) = "selectTopic($event)"
-    [selectedCourseId] = "selectedCourseId"
-    [selectedModuleId] = "selectedModuleId" (selectedModuleIdChange) = "selectModule($event)">
+  <app-module>
   </app-module>
 </div>

@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {CourseServiceClient} from '../services/CourseServiceClient';
-import {map} from 'rxjs/operators';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-course-viewer',
@@ -9,31 +7,7 @@ import {map} from 'rxjs/operators';
   styleUrls: ['./course-viewer.component.css']
 })
 export class CourseViewerComponent implements OnInit {
-  course;
-  selectedCourseId;
-  selectedModuleId;
-  selectedLessonId;
-  selectedTopicId;
-  constructor(private route: ActivatedRoute, private service: CourseServiceClient) {
-    const courseIdObs = this.route
-      .paramMap
-      .pipe(map(params => params.get('courseId') || 'None'));
-
-    courseIdObs.subscribe(courseId =>
-      this.service.findCourseById(courseId)
-        .then(course => {
-          this.course = course;
-          this.selectedCourseId = courseId;
-        }));
-  }
-  selectModule(moduleId) {
-    this.selectedModuleId = moduleId;
-  }
-  selectLesson(lessonId) {
-    this.selectedLessonId = lessonId;
-  }
-  selectTopic(topicId) {
-    this.selectedTopicId = topicId;
+  constructor(private router: Router, private route: ActivatedRoute) {
   }
   ngOnInit() {
   }
